@@ -96,14 +96,49 @@ so content has space between edge of screen */
  /* both grid-gap and margin yeilded similar results, decided to stick with grid-gap for now */
 
  /* create display flex for class emoji, with a flex direction of column, this will allow us to shift 
- the items in the container well keeping them in a column, we will align to the center so all items are centered
+ the items in the container well keeping them in a column
  and we will use order on class icon using -1 to bring it to the top of the column  */
     .emoji {
     display: flex;
     flex-direction: column;
-    align-items: center;
     }
 
     .icon {
     order: -1;
+    }
+
+    /* /* text and button is actually aligned left, well emojis are center aligned, use class icon to align-self:center */
+    /*margin top will need to be added to all elements 
+    padding creates space between the title and line which is why we use margin-top for spacing instead */
+    
+    .emoji h2, .emoji p, .emoji a {
+        margin-top: 1.5rem;
+    }
+
+    .emoji p {
+        margin-bottom: 1.5rem;
+    }
+
+    .icon {
+        align-self: center;
+    }
+    
+    /* when moving the screen to change sizes the button isn't consistently place so we will align that to the 
+    bottom of the container , to keep consisstent we need a margin-top of auto (so we need to go back and add margin-bottom just 
+    to .emoji p)*/
+
+    .emoji a {
+        align-items: baseline;
+        margin-top: auto;
+    }
+
+/* add bold to headings and increase font size */
+    h1, h2 {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+/* add padding to h1 to line up with grid */
+    h1 {
+        padding-left: 1.25rem;
+        padding-top: 1.5rem;
     }
