@@ -75,3 +75,22 @@ body {
 .icon {
   font-size: 4rem;
 }
+
+/* create a grid display for the div emojis this will allow the content to be arranged in a grid layout 
+then write grid-template-columns so content can be arranged into two columns, add grid-gap or margin in next section, add padding 
+so content has space between edge of screen */
+.emojis {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+/* address class emoji, add solid black border , add padding, and margin -  i think we could also do a grid gap above
+ so we'll test and see what looks better - add border-radius to round corners */
+ .emoji {
+  border: 1px solid #222;
+  padding: 1rem;
+  border-radius: 8px;
+ }
+ /* both grid-gap and margin yeilded similar results, decided to stick with grid-gap for now */
