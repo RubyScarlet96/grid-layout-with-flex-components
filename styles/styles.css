@@ -94,3 +94,16 @@ so content has space between edge of screen */
   border-radius: 8px;
  }
  /* both grid-gap and margin yeilded similar results, decided to stick with grid-gap for now */
+
+ /* create display flex for class emoji, with a flex direction of column, this will allow us to shift 
+ the items in the container well keeping them in a column, we will align to the center so all items are centered
+ and we will use order on class icon using -1 to bring it to the top of the column  */
+    .emoji {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .icon {
+    order: -1;
+    }
